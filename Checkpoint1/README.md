@@ -12,7 +12,7 @@
 3. [Multi line code snippet](#multi-line-of-code-snippet)
 4. [Sample json objects](#sample-json-objects)
 5. [Sample table](#sample-table)
-6. Sample hyperlink
+6. [Sample hyperlink](#sample-hyperlink)
 
 ### My Image
 This is my image submission
@@ -57,3 +57,6 @@ $ find /etc -exec grep\
 | :--------- | ---:| :-----:| :------------:| -----------: |
 | Parkhi Sharma | 24  | Female   | xyz street   | xxx |
 | Khushi | 23  | Female   | abc road  | xxx |
+
+### Sample hyperlink
+[Click to go to W3schools](https://www.w3schools.com/)
