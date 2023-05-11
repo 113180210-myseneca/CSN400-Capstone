@@ -16,7 +16,7 @@
 
 ### My Image
 This is my image submission
-<img src="" alt="My Collaboration Screenshot" title="My Collaboration Screenshot">
+![alt text](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/396f3aa1-fdc5-4a16-a672-060196732277)
 
 ### My single line code snippet
 This is my single line of code snippet `az login`
