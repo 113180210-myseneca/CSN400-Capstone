@@ -48,4 +48,7 @@ Date:   Thu May 18 15:18:20 2023 -0400
 
     adds CP2 README.md
 ```
-cgcgc
+## Part B
+### Question: You can use `git status` command to understand the status of the files in your working directory, staging area and local repo. You can use `git log` command to get list of your commit history. How do these two commands differ?
+
+*Answer:* The git status command offers details on your working directory's and the staging area's current conditions. It informs you of the files that have been edited, added, or removed as well as whether or not they have been staged.The git log command, however, presents a list of commits in reverse chronological order. It displays details like the commit message, author, date, and commit hash. You may view a timeline of all the commits made to the repository.
