@@ -52,3 +52,38 @@ Date:   Thu May 18 15:18:20 2023 -0400
 ### Question: You can use `git status` command to understand the status of the files in your working directory, staging area and local repo. You can use `git log` command to get list of your commit history. How do these two commands differ?
 
 *Answer:* The git status command offers details on your working directory's and the staging area's current conditions. It informs you of the files that have been edited, added, or removed as well as whether or not they have been staged.The git log command, however, presents a list of commits in reverse chronological order. It displays details like the commit message, author, date, and commit hash. You may view a timeline of all the commits made to the repository.
+
+## Part C
+
+```
+$ git log -n 5
+commit 5a4ad4c0a627857de220984fb1112eb467e079e1 (HEAD -> main, origin/feat-emojis, feat-emojis)
+Author: Parkhi Local VSCode <psharma178@myseneca.ca>
+Date:   Thu May 18 16:58:38 2023 -0400
+
+    adds emojis to feat-emojis branch
+
+commit a9c366e834cc25aa7628c436ba73aab296a322ce
+Author: Parkhi Local VSCode <psharma178@myseneca.ca>
+Date:   Thu May 18 16:55:30 2023 -0400
+
+    adds emojis to feat-emojis branch
+
+commit a9403c41eecc0e922ea120333692fc1c122386aa (origin/main, origin/HEAD)
+Author: Parkhi Local VSCode <psharma178@myseneca.ca>
+Date:   Thu May 18 16:49:55 2023 -0400
+
+    adds footnotes
+
+commit 592d4b07730123f2fc1e056de4d79b744f4de9d8
+Author: Parkhi Local VSCode <psharma178@myseneca.ca>
+Date:   Thu May 18 16:44:54 2023 -0400
+
+    adds part B
+
+commit 39a4cf1e493203c67a6882a487fad4dea0a4bf60
+Author: Parkhi Local VSCode <psharma178@myseneca.ca>
+Date:   Thu May 18 16:39:38 2023 -0400
+
+    copied files
+```bash
