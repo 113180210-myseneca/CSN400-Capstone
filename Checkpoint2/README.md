@@ -86,4 +86,33 @@ Author: Parkhi Local VSCode <psharma178@myseneca.ca>
 Date:   Thu May 18 16:39:38 2023 -0400
 
     copied files
-```bash
+```
+## Part D
+
+### Question 1:What are the differences between `develop` branch and `main` branch?
+
+*Answer:* In Git, the main branch—previously known as master—is commonly regarded as the main branch. It stands for the stable and functionally complete version of the codebase. The main branch of a project is frequently used to monitor its official releases, and it is always expected to be in a deployable state. Usually, after extensive testing and validation, this branch receives merges from other branches.Where continuing development work is done is on the develop branch, also called a development branch. It serves as a staging area for currently being worked on features, bug patches, and other adjustments. To work together on new code and carry out integration testing, developers create and merge feature branches into the develop branch. Once the develop branch's modifications are assessed to be stable, they can be merged into the main branch for publication.
+
+### Question 2:What are the three supporting branches? Briefly describe the function of each of these supporting branches.
+
+*Answer:*
+Feature branches: To build new features or functionalities, feature branches are made. In order to complete and test a feature, they enable developers to work on isolated modifications without affecting the develop or main development branch. It is possible to merge the feature back into the main branch once it is complete.
+
+Release branches are formed while getting ready for a new release. They act as a stabilisation area where bugs can be fixed, documentation can be updated, and the last round of testing can be done before the release is made public. The main branch and the develop branch can both incorporate the release branch if it has been determined to be stable. This makes it possible to continue development work while also including problem patches into the upcoming release.
+
+Hotfix branches are used to swiftly fix urgent problems or faults in the production code. They're built off the main branch and enable quick fixes for pressing issues. When the hotfix is finished, it is merged into the develop branch and main branch to guarantee that it will be included in the upcoming release and continued development work.
+
+### Question 3: What are the best practices in working with release branches?
+
+*Answer:*
+1. Create dedicated release brach from the main branch when trying to release. It fixes bugs without interfering with ongoing development.
+2. It is important to freeze new feature development on the branch. This makes sure that only necessary changes for the release are included. New changes would continue to develop on sepearte feature branch.
+3. Perform testing on the release branch to see if there are any issue before releasing. This helps ensure that release is stable.
+4. If you come across any bugs, fix them directly on the release branch. 
+5. Once the release branch is stable and ready to develop, merge it back on the main development branch and release branch itself. This makes sure bugs from release to be indluded in the current development.
+6. Make sure to tag the release with a version number or tag so you can track it in the future.
+
+
+
+
+
