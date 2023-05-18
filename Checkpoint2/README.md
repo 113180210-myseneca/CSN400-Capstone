@@ -104,8 +104,7 @@ Hotfix branches are used to swiftly fix urgent problems or faults in the product
 
 ### Question 3: What are the best practices in working with release branches?
 
-*Answer:*
-1. Create dedicated release brach from the main branch when trying to release. It fixes bugs without interfering with ongoing development.
+*Answer:*1. Create dedicated release brach from the main branch when trying to release. It fixes bugs without interfering with ongoing development.
 2. It is important to freeze new feature development on the branch. This makes sure that only necessary changes for the release are included. New changes would continue to develop on sepearte feature branch.
 3. Perform testing on the release branch to see if there are any issue before releasing. This helps ensure that release is stable.
 4. If you come across any bugs, fix them directly on the release branch. 
