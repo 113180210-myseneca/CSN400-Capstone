@@ -22,6 +22,16 @@ What is the color of the text after you forcefully overwrite remote with local c
 ### Answer
 Red
 
+## Part B
+
+- [part2-conflict-error.log](./logs/part2-conflict-error.log)
+- [part2-pull-error.log](./logs/part2-pull-error.log)
+- [part2-reset-head.log](./logs/part2-reset-head.log)
+
+### Question    
+What is the color of the text after you forcefully overwrite remote with local changes?
+### Answer
+Maroon
 
 
 
