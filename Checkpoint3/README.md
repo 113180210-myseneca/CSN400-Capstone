@@ -38,9 +38,14 @@ Maroon
 - [part3-pull-conflict.log](./logs/part3-pull-conflict.log)
 - [part3-status](./logs/part3-status.log)
 
+Screenshot of index.html
 ![Screenshot of index.html](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/22b90725-045d-4f16-af6f-e4df27db2a59)
 
+## Part D
 
+Screenshot of pull request summary #1![Screenshot of pull request summary #1](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/75eef0ec-8ee3-4d9a-aafc-aac0513e2b3f)
+
+Screenshot of pull request summary #2![Screenshot of pull request summary #2](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/b9f68e8a-ee22-42f3-ad71-477bfbf1525f)
 
 
 
