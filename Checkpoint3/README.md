@@ -12,3 +12,17 @@
 3. [Part C - Manage Conflicts - Merge Editor](#part-c)
 4. [Part D - Collaboration - Creating Pull Request](#part-d)
 
+## Part A
+- [part1-conflict-error.log](./logs/part1-conflict-error.log)
+
+- [part1-conflict-overwrite.log](./logs/part1-conflict-overwrite.log)
+
+### Question
+What is the color of the text after you forcefully overwrite remote with local changes?
+### Answer
+Red
+
+
+
+
+
