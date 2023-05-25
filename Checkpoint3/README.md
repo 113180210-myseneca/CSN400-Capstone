@@ -33,6 +33,15 @@ What is the color of the text after you forcefully overwrite remote with local c
 ### Answer
 Maroon
 
+## Part C
+
+- [part3-pull-conflict.log](./logs/part3-pull-conflict.log)
+- [part3-status](./logs/part3-status.log)
+
+![Screenshot of index.html](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/22b90725-045d-4f16-af6f-e4df27db2a59)
+
+
+
 
 
 
