@@ -42,27 +42,6 @@ You can add an image or a code block, too.
 
 </details>
 
-### Example Two: Collapsed Section with Python Code
-
-<details>
-
-<summary><b>Sample Python Code</b></summary>
-
-```python
-dicts_lists = [
-{
-    "Name": "James",
-    "Age": 20,
-  },
-  {
-     "Name": "May",
-     "Age": 14,
-  },
-  {
-    "Name": "Katy",
-    "Age": 23,
-  }
-]
 
 # There are different ways to sort that list
 # 1- Using the sort/ sorted function based on the age
