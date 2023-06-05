@@ -75,3 +75,22 @@
 - Step 3: Explore the container
 
 ![Step 3 Explore the container](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/1f65f869-1cb9-4130-98f2-88dc3910f4ed)
+
+## Part D
+
+- Step 1: Get an image Step
+
+![Step 1 Get an image Step](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/bb6f771f-6ccd-4bb4-bfc3-6a2136a26b6a)
+
+- Step 2: Sign in to Docker
+
+![Step 2 Sign in to Docker](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/9d05be9d-1097-44d8-9d07-4bb4e30ce892)
+
+- Step 3: Rename your image
+
+![Step 3 Rename your image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/226deae6-ada5-4079-9458-05f334efc5d5)
+
+
+- Step 4: Push your image to Docker Hub
+
+![Step 4 Push your image to Docker Hub](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/8283a18a-a6ba-4248-bb4a-d30d121fcf6d)
