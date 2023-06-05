@@ -38,3 +38,24 @@
 - Step 5: Stop your container
 
 ![Step 5 Stop your container](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/e1326e64-b80b-48e2-a5a6-3cc30f650271)
+
+## Part B
+
+- Step 1: Get the sample application
+
+![Step 1 Get the sample application](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/f5507b0e-3450-475f-abef-d1a605781418)
+
+
+- Step 2: Explore the Dockerfile
+
+![Step 2 Explore the Dockerfile](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/0f459fe3-252e-4f29-930d-06042248a9a0)
+
+
+- Step 3: Build your first image
+
+![Step 3 Build your first image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/3095e328-7fb3-4c2b-bbac-9d0ad157ef1e)
+
+
+- Step 4: Run your container
+
+![- Step 4 Run your container](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/16afec04-597d-481e-9482-d983f1a99d9e)
