@@ -59,3 +59,19 @@
 - Step 4: Run your container
 
 ![- Step 4 Run your container](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/16afec04-597d-481e-9482-d983f1a99d9e)
+
+## Part C
+
+- Step 1: Search for the image
+
+![Step 1 Search for the image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/eace5c82-a7bd-4495-b017-a47c4acd1cc3)
+
+
+- Step 2: Run the image
+
+![Step 2 Run the image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/ab1d527a-8c0f-42c6-b6e7-ef17eaa9709e)
+
+
+- Step 3: Explore the container
+
+![Step 3 Explore the container](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/1f65f869-1cb9-4130-98f2-88dc3910f4ed)
