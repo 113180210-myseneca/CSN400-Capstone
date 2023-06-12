@@ -112,6 +112,22 @@ Repeat all the step for app update for: <p className="text-center">What tasks no
 - Screenshot that clearly shows the url with port number and the deployed app page
 ![Screenshot 2 Part B](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/f14190ff-f4f6-491f-b3ef-162b3627ddac)
 
+## Part C
+```
+$ docker volume inspect todo-db
+[
+    {
+        "CreatedAt": "2023-06-12T17:17:36Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/todo-db/_data",
+        "Name": "todo-db",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+```
+
 
 
 
