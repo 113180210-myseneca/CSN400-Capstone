@@ -17,11 +17,8 @@
 ### Question 1 
 If you run docker build -t getting-started . for a second time, the build time will be different from first time, why? Why the number of steps are also different? Explain your answers in detail.
 ### Answer
-During the execution of docker build -t getting-started. The second build may take longer to complete and involve more stages than the first due to a variety of circumstances. These discrepancies primarily result from:
-Layer Caching: When building images, Docker makes use of layer caching. Docker can re-use previously cached layers if the context (the files and folders used during the build) and the layers in the Dockerfile haven't changed since the last build. Due to Docker not having to rebuild those unchanged layers, the build time is greatly decreased.
-Incremental Builds: Docker carries out incremental builds by examining the context and Dockerfile modifications. Based on the alterations, it indicates the stages or steps that need to be rebuilt. If only a portion of your code or Dockerfile has been modified, Docker will only carry out the operations required to incorporate those changes rather than rebuilding the complete image. The build time is significantly reduced by this optimisation.
-Build Cache: Docker maintains a build cache where it caches the metadata and intermediate images from earlier builds. Docker can reuse the cache from a previous build to expedite the build process if the cache is accessible and still valid. However, Docker may need to invalidate the cache and rebuild from start if you made significant changes, like changing the Dockerfile or adding new dependencies.
-If there are different steps, it can be because the build context or Dockerfile have changed. The number of steps Docker must carry out throughout the build may change if you made changes to the Dockerfile, for as by adding or removing instructions. The build procedure and the number of steps required can be affected by modifications to the build context, such as the addition or deletion of files.
+The second docker build -t getting-started because Docker employs layer caching. lasted less time to build. By caching the results of each instruction in the Dockerfile, Docker reuses these layers if the instructions haven't changed in subsequent builds. The construction process moves along considerably more swiftly as a result. The steps ought to remain constant from build to build unless the Dockerfile changes. Nevertheless, Docker may display "Using cache" for a few stages in subsequent builds, indicating that certain layers didn't need to be rebuilt but still being included in the overall steps.
+
 
 ### Question 2
 What does -t flag do? If you do not use it what is the error? embed the error in your answer.
