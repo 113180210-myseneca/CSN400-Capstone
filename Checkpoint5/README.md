@@ -93,7 +93,7 @@ $ docker run -dp 3000:3000 getting-started
 f93c4c308142feb810565ba6a1f759a35840aa13e9c8ba866ce9570a2c0ad03e
 docker: Error response from daemon: driver failed programming external connectivity on endpoint intelligent_hopper (b5cc0f04d6b2f20713f780ff2c5fe0bb3ea8f8188b0e4abe3e7cd4a1e6990d69): Bind for 0.0.0.0:3000 failed: port is already allocated.
 ```
-#### The may occur because:
+#### This may occur because:
 Dependencies that are incorrectly specified or missing: The application inside the container may need particular dependencies or configurations that are incorrectly set up. The container can exit incorrectly as a result of this.
 
 Starting Error: The application may experience a starting error that prevents it from running properly. This may be the result of problems like improper command execution, missing files, or inconsistent settings.
@@ -104,6 +104,14 @@ Resource Restrictions: The container may be unable to start or exit if not enoug
 Repeat all the step for app update for: <p className="text-center">What tasks no to do for CSN400 yet! Add one above!</p> and embed a screenshot of your app in your submission.
 ### Answer
 ![Question 9 Screenshot](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/c8946c3c-00de-4696-87b6-d585013c68e4)
+
+## Part B
+- Screenshot of your images from DockerHub
+![Screenshot 1 Part B](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/ccc73e82-e8a6-4219-8ef2-d97de8618824)
+
+- Screenshot that clearly shows the url with port number and the deployed app page
+![Screenshot 2 Part B](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/f14190ff-f4f6-491f-b3ef-162b3627ddac)
+
 
 
 
