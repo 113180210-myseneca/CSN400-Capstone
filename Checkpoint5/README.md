@@ -129,6 +129,53 @@ $ docker volume inspect todo-db
 ]
 ```
 ## Part D
+- Output of mysql> SHOW DATABASES;
+```sql
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
+| todos              |
++--------------------+
+5 rows in set (0.01 sec)
+```
+
+- Output of dig mysql
+```sql
+30f3e06cc5a0  ~  dig mysql
+
+; <<>> DiG 9.18.13 <<>> mysql
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 45624
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+
+;; QUESTION SECTION:
+;mysql.                         IN      A
+
+;; ANSWER SECTION:
+mysql.                  600     IN      A       172.18.0.2
+
+;; Query time: 0 msec
+;; SERVER: 127.0.0.11#53(127.0.0.11) (UDP)
+;; WHEN: Mon Jun 12 20:19:38 UTC 2023
+;; MSG SIZE  rcvd: 44
+```
+- Output of mysql> SELECT * from todo_items;
+```sql
+mysql> select * from todo_items;
++--------------------------------------+----------------+-----------+
+| id                                   | name           | completed |
++--------------------------------------+----------------+-----------+
+| aa0d1733-752d-47e1-921b-ebd943ec0ed9 | Do laundry     |         0 |
+| cb7680a2-81c1-4ab1-b7a1-9068352bcf0b | Do assignments |         0 |
++--------------------------------------+----------------+-----------+
+2 rows in set (0.00 sec)
+```
 
 
 
