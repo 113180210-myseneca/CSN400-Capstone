@@ -113,6 +113,7 @@ Repeat all the step for app update for: <p className="text-center">What tasks no
 ![Screenshot 2 Part B](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/f14190ff-f4f6-491f-b3ef-162b3627ddac)
 
 ## Part C
+- Output of docker volume inspect todo-db
 ```
 $ docker volume inspect todo-db
 [
@@ -127,6 +128,7 @@ $ docker volume inspect todo-db
     }
 ]
 ```
+## Part D
 
 
 
