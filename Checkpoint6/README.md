@@ -46,7 +46,7 @@ Router-127                                        Student-RG-954525  canadacentr
 Server-127                                        Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
 Student-954525-vnet                               Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
 ```
-### ResourceGroup List
+### Resource Group List
 ```bash
 Checking status for Resource Group: Student-RG-954525
 exists!
@@ -96,7 +96,7 @@ The required parameters are:
 ```
 The optional parameters are:
 ```bash
-    --loaction
+    --location
     --address-prefixes
     --subnet-name
     --subnet-prefix
@@ -128,3 +128,63 @@ The optional parameters are:
     --service-endpoints
 ```
 
+## Part B
+
+#### ***_Question 1_***: List all VNETs using az network vnet list command and send the output in json format to vnet_list.jsonfile
+
+#### ***_Answer_***:
+- [Vnet_List File](./outputvnetlist_psharma178.json)
+
+#### ***_Question 2_***: Get the details of your default student vnet using az show command and send the output in json format to student_vnet.json file
+
+#### ***_Answer_***:
+- [Student_Vnet File](./outputstudentvnet_psharma178.json)
+
+#### ***_Question 3_***: List all peerings using az network vnet peering list command and send the output in table format to peerings.tblfile
+
+#### ***_Answer_***:
+- [Peerings_tbl File](./outputpeerings_psharma178.tbl)
+
+#### ***_Question 4_***: Get the details of your Router-XX subnet SN1 using az show command in json format and query it for details of subnet and rout associations. Only submit the specific property you are asked for. You will need to embed this in your README.md as per instructions.
+
+#### ***_Answer_***:
+```bash
+az network vnet subnet show --resource-group Student-RG-954525 --vnet-name Router-127 --name SN1 --query "{Subnet
+: name, AddressPrefix: addressPrefix, RouteTable: routeTable.id, NetworkSecurityGroup: networkSecurityGroup.id}"
+{
+  "AddressPrefix": "192.168.127.32/27",
+  "NetworkSecurityGroup": null,
+  "RouteTable": null,
+  "Subnet": "SN1"
+}
+```
+#### ***_Question 5_***: List all routes in RT-xx using az network route-table route list command and send the output in table format to route_list.tblfile
+
+#### ***_Answer_***:
+- [Route_List File](./outputroutelist_psharma178.tbl)
+
+#### ***_Question 6_***: Get the details of route between your Router-xx SN1 and Server-xx SN using az network route-table route show and send the output in json format to route_details.json
+
+#### ***_Answer_***:
+- [Route_Details File](./outputroutedetails_psharma178.json)
+
+### Resource list
+```bash
+az resource list --output table
+
+Name                                              ResourceGroup      Location       Type                                     Status
+------------------------------------------------  -----------------  -------------  ---------------------------------------  --------
+AzureBastionSubnet                                Bastion_RG         canadacentral  Microsoft.Network/bastionHosts
+Bastion-pip                                       Bastion_RG         canadacentral  Microsoft.Network/publicIPAddresses
+Bastion-Vnet                                      Bastion_RG         canadacentral  Microsoft.Network/virtualNetworks
+NetworkWatcher_canadacentral                      NetworkWatcherRG   canadacentral  Microsoft.Network/networkWatchers
+NetworkWatcher_canadaeast                         NetworkWatcherRG   canadaeast     Microsoft.Network/networkWatchers
+lr-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+ls-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+wc-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+ws-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+RT-127                                            Student-RG-954525  canadacentral  Microsoft.Network/routeTables
+Router-127                                        Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
+Server-127                                        Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
+Student-954525-vnet                               Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
+```
