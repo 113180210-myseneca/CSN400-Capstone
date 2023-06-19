@@ -188,3 +188,71 @@ Router-127                                        Student-RG-954525  canadacentr
 Server-127                                        Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
 Student-954525-vnet                               Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
 ```
+
+## Part C
+
+#### ***_Question 1_***: What is Azure Virtual Network (VNET)? Elaborate in your own words, you may use diagrams if drawn by yourself.
+
+#### ***_Answer_***: Azure VNet is a networking service which is cloud-based and allows you to create and manage networks in the Azure cloud.
+
+#### ***_Question 2_***: In the context of Hybrid Cloud architecture. How on-prem computers can access resources inside Azure virtual network?
+
+#### ***_Answer_***: 
+Azure Bastion: It enables secure remote access to particular VMs located inside an Azure VNet using SSH or RDP connectivity.
+
+Azure ExpressRoute: The on-prem network and Azure are connected by this private connection. The on-prem network is extended to Azure which allows on prem PCs to use Azure VNet resources.
+
+#### ***_Question 3_***: IWhat are the most important benefits of Azure Virtual Networks? Elaborate in your own words. Do not copy/paste from Azure Documentation.
+
+#### ***_Answer_***: 
+Integration: As a result of VNets' smooth integration with other Azure services, you may build comprehensive solutions.
+
+Isolation: Azure Virtual Networks (VNets) give you the ability to design a setup that is safer and easier to manage by isolating your resources.
+
+Security and Compliance: Azure provides security measures that adhere to different industry standards, assisting in the protection of your data.
+
+Traffic Control: You can determine how it moves, controlling network traffic enables the development of safe and efficient systems.
+
+Hybrid Connectivity: You can enable a seamless data transfer by setting up a connection between your local network and the Azure cloud.
+
+#### ***_Question 4_***: What is the difference between Network Security Group (NSG) and Route-Tables?
+
+#### ***_Answer_***:
+NSG: By applying rules to govern whether network traffic is allowed in or out, it serves as a sort of security guard.
+
+Route Tables: These serve as a form of road map for network traffic, directing it to the appropriate location inside your network. They determine the paths taken by traffic to reach to its destination.
+
+#### ***_Question 5_***: What is the difference between NSG and Firewalls?
+
+#### ***_Answer_***: 
+Network Security Group (NSG): It uses simple rules like IP addresses and ports to decide whether network traffic can enter or exit. 
+
+Firewall: It is a more sophisticated traffic enforcer, decides on specific programmes, websites, and potential security hazards in addition to IP addresses and ports.
+
+#### ***_Question 6_***: What is a hob-and-spoc network topology and how be deployed in Azure Cloud?
+
+#### ***_Answer_***: 
+The hub-and-spoke network topology is made around the primary network and various secondary netwworks.
+
+Hub: The core network acts as the hub for connection and shared services in a hub-and-spoke architecture.
+
+Spokes: Peripheral networks connected to the hub that provide security perimeters and divide workloads.
+
+Azure deployment: For on-premises connectivity, establish a hub virtual network with a gateway.For each of your workloads, create a separate virtual network with spokes.Create peering between the hub and the spokes.
+Utilising route tables and network security groups, configure routing and security.Installing VPN or ExpressRoute is an option for on-premises connectivity.
+
+#### ***_Question 7_***: In working with Azure VNETs, do you need o to define gateways for Azure to route traffic between subnets?
+
+#### ***_Answer_***: No, Azure can route traffic among subnets in the same VNet without the need for gateways. Azure handles the routing automatically for you. Gateways are typically required to connect to other VNets or external networks.
+
+#### ***_Question 8_***: When do you need to configure and use Virtual Network Gateways?
+
+#### ***_Answer_***: When you want to :
+Site-to-Site Connectivity: Establish secure connections between the on-premises network and the Azure VNet using site-to-site (S2S) connectivity.
+
+Point-to-Site Connectivity:  Allow for secure connections between individual client devices and the Azure VNet via point-to-site (P2S) connectivity.
+
+Vnet-to-Vnet Connectivity: Establish secure connections between Azure VNets by using VNet-to-VNet connectivity.
+
+ExpressRoute Connectivity: Enable private, dedicated connections between your on-premises network and Azure.
+
