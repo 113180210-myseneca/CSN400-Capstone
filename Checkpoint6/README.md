@@ -338,6 +338,8 @@ Student-954525-vnet                               Student-RG-954525  canadacentr
 
 #### ***_Answer_***:
 ./delete_all_vm.sh
+![vms deleted](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/e0f7533b-2d62-4559-857a-7575d8358e23)
+
 
 #### ***_Question 5_***: After deleting list all your VMs using az  vm list ... with the output in table format. What command did you use? How can you ensure all your VMs are deleted?
 
