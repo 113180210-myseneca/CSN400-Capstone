@@ -15,7 +15,7 @@
 
 ## Part A
 
-### Edited lines in ```_network_config.sh_``` file
+### Edited lines in network_config.sh file
 
     RG_NAME="Student-RG-954525"     
     LOCATION="canadacentral"    
@@ -59,7 +59,8 @@ Student-RG-954525  canadacentral  Succeeded
 ```
 #### ***_Question 1_***: In network_config_test.sh what does if ```[[ ! $(az group list -o tsv --query "[?name=='$RG_NAME']") ]]``` do? Explain your answer.
 
-#### ***_Answer_***: The above mentioned script contains a command as follows:
+#### ***_Answer_***: 
+The above mentioned script contains a command as follows:
 ```bash
 if [[ ! $(az group list -o tsv --query "[?name=='$RG_NAME']") ]]
 ```
@@ -71,13 +72,15 @@ The command proceeds and responds with respect to if the group exists or not.
 
 #### ***_Question 2_***: Why is it crucial to check if a resource exist before creating it? What bash syntax do you use to test this? How do you check if a vnet exits in vnet_create.sh?
 
-#### ***_Answer_***: It very important to confirm if a particular resource already exists or not as it eliminates disputes and conflicts. You can use the following command to test this:
+#### ***_Answer_***: 
+It very important to confirm if a particular resource already exists or not as it eliminates disputes and conflicts. You can use the following command to test this:
 ```bash
 if [[ $(az network vnet list -g $RG_NAME -o tsv --query "[?name=='$vnet']") ]]
 ```
 #### ***_Question 3_***: What is the Azure CLI command to create vnet? Give the specific command as per your environment and unique ID configuration. What are the required and what are the optional parameters that you need to pass to it?
 
-#### ***_Answer_***: You can use the following command to create a vnet:
+#### ***_Answer_***: 
+You can use the following command to create a vnet:
 ```bash
 az network vnet create
 ```
@@ -103,7 +106,8 @@ The optional parameters are:
 ```
 #### ***_Question 4_***: What is the Azure CLI command to create subnet? Give the specific command as per your environment and unique ID configuration. What are the required and what are the optional parameters that you need to pass to it?
 
-#### ***_Answer_***: The command to create a subnet is:
+#### ***_Answer_***: 
+The command to create a subnet is:
 ```bash
 az network vnet subnet create
 ```
@@ -193,7 +197,8 @@ Student-954525-vnet                               Student-RG-954525  canadacentr
 
 #### ***_Question 1_***: What is Azure Virtual Network (VNET)? Elaborate in your own words, you may use diagrams if drawn by yourself.
 
-#### ***_Answer_***: Azure VNet is a networking service which is cloud-based and allows you to create and manage networks in the Azure cloud.
+#### ***_Answer_***: 
+Azure VNet is a networking service which is cloud-based and allows you to create and manage networks in the Azure cloud.
 
 #### ***_Question 2_***: In the context of Hybrid Cloud architecture. How on-prem computers can access resources inside Azure virtual network?
 
@@ -243,11 +248,14 @@ Utilising route tables and network security groups, configure routing and securi
 
 #### ***_Question 7_***: In working with Azure VNETs, do you need o to define gateways for Azure to route traffic between subnets?
 
-#### ***_Answer_***: No, Azure can route traffic among subnets in the same VNet without the need for gateways. Azure handles the routing automatically for you. Gateways are typically required to connect to other VNets or external networks.
+#### ***_Answer_***: 
+No, Azure can route traffic among subnets in the same VNet without the need for gateways. Azure handles the routing automatically for you. Gateways are typically required to connect to other VNets or external networks.
 
 #### ***_Question 8_***: When do you need to configure and use Virtual Network Gateways?
 
-#### ***_Answer_***: When you want to :
+#### ***_Answer_***: 
+When you want to :
+
 Site-to-Site Connectivity: Establish secure connections between the on-premises network and the Azure VNet using site-to-site (S2S) connectivity.
 
 Point-to-Site Connectivity:  Allow for secure connections between individual client devices and the Azure VNet via point-to-site (P2S) connectivity.
@@ -255,4 +263,104 @@ Point-to-Site Connectivity:  Allow for secure connections between individual cli
 Vnet-to-Vnet Connectivity: Establish secure connections between Azure VNets by using VNet-to-VNet connectivity.
 
 ExpressRoute Connectivity: Enable private, dedicated connections between your on-premises network and Azure.
+
+## Part D
+
+#### ***_Question 1_***: List all VMs and send the output in table format to vm_list.tbl file. What command did you use?
+
+#### ***_Answer_***:
+- [VM_List File](./psharma178vmlist.tbl) 
+
+Command: 
+```bash
+ az vm list --output table > psharma178vmlist.tbl
+ ```
+
+#### ***_Question 2_***: Get the details of your WC-99 using az show command and send the output in json format to WC-99-details.json file. What command did you use?
+
+#### ***_Answer_***: 
+- [WC118_Details File](./psharma178WC127details.json)
+
+Command: 
+```bash 
+az vm show --name WC-127 --resource-group Student-RG-954525 --output json > psharma178WC127details.json
+```
+
+#### ***_Question 3_***: List all NSG using az list command and send the output in table format to nsg_list.tblfile. What command did you use?
+
+#### ***_Answer_***: 
+- [NSG_List File](./psharma178nsglist.tbl)
+
+Command: 
+```bash
+ az network nsg list --output table > psharma178nsglist.tbl
+```
+
+### Resource list
+
+```bash 
+az resource list --output table
+Name                                              ResourceGroup      Location       Type                                     Status
+------------------------------------------------  -----------------  -------------  ---------------------------------------  --------
+AzureBastionSubnet                                Bastion_RG         canadacentral  Microsoft.Network/bastionHosts
+Bastion-pip                                       Bastion_RG         canadacentral  Microsoft.Network/publicIPAddresses
+Bastion-Vnet                                      Bastion_RG         canadacentral  Microsoft.Network/virtualNetworks
+NetworkWatcher_canadacentral                      NetworkWatcherRG   canadacentral  Microsoft.Network/networkWatchers
+NetworkWatcher_canadaeast                         NetworkWatcherRG   canadaeast     Microsoft.Network/networkWatchers
+LR-127_disk1_6ce24e6e90354002b6ea19f60ee360ab     STUDENT-RG-954525  canadacentral  Microsoft.Compute/disks
+LS-127_OsDisk_1_13162328d7014a828894884f10d0e28d  STUDENT-RG-954525  canadacentral  Microsoft.Compute/disks
+WC-127_OsDisk_1_30d069f36b5e4ae9a51cb05af3bb3b11  STUDENT-RG-954525  canadacentral  Microsoft.Compute/disks
+WS-127_disk1_15847131e9b040a692ac859a45d240a0     STUDENT-RG-954525  canadacentral  Microsoft.Compute/disks
+sshkey-127                                        Student-RG-954525  canadacentral  Microsoft.Compute/sshPublicKeys
+LR-127                                            Student-RG-954525  canadacentral  Microsoft.Compute/virtualMachines
+LS-127                                            Student-RG-954525  canadacentral  Microsoft.Compute/virtualMachines
+WC-127                                            Student-RG-954525  canadacentral  Microsoft.Compute/virtualMachines
+WS-127                                            Student-RG-954525  canadacentral  Microsoft.Compute/virtualMachines
+shutdown-computevm-LR-127                         Student-RG-954525  canadacentral  Microsoft.DevTestLab/schedules
+shutdown-computevm-LS-127                         Student-RG-954525  canadacentral  Microsoft.DevTestLab/schedules
+shutdown-computevm-WC-127                         Student-RG-954525  canadacentral  Microsoft.DevTestLab/schedules
+shutdown-computevm-WS-127                         Student-RG-954525  canadacentral  Microsoft.DevTestLab/schedules
+lr-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+ls-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+wc-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+ws-127                                            Student-RG-954525  canadacentral  Microsoft.Network/networkInterfaces
+LR-NSG-127                                        Student-RG-954525  canadacentral  Microsoft.Network/networkSecurityGroups
+LS-NSG-127                                        Student-RG-954525  canadacentral  Microsoft.Network/networkSecurityGroups
+WC-NSG-127                                        Student-RG-954525  canadacentral  Microsoft.Network/networkSecurityGroups
+WS-NSG-127                                        Student-RG-954525  canadacentral  Microsoft.Network/networkSecurityGroups
+RT-127                                            Student-RG-954525  canadacentral  Microsoft.Network/routeTables
+Router-127                                        Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
+Server-127                                        Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
+Student-954525-vnet                               Student-RG-954525  canadacentral  Microsoft.Network/virtualNetworks
+```
+
+#### ***_Question 4_***: Delete all VMs running delete_all_vm.sh
+
+#### ***_Answer_***:
+./delete_all_vm.sh
+
+#### ***_Question 5_***: After deleting list all your VMs using az  vm list ... with the output in table format. What command did you use? How can you ensure all your VMs are deleted?
+
+#### ***_Answer_***: 
+No VMs listed.Command used is 
+```bash
+ az vm list --output table
+```
+We can ensure that VMs were deleted because there is no list displayed.
+
+#### ***_Question 6_***: Provide screenshot of auto shutdown configuration for LS_XX. Is there any command to show this? What is the time-zone? What should be the correct time settings considering the time zone differences?
+
+#### ***_Answer_***: 
+- Screenshot of auto shutdown configuration
+![Screenshot of auto shutdown configuration](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/f9a6887f-2729-497e-8e9b-67dad26d7eda)
+
+Command to show auto shutdown is 
+```bash 
+az vm show --name <vm_name> --resource-group <resource_group_name> --query 'powerState.autoShutdown'
+```
+
+Time settings: 
+```bash
+timedatectl show --property=Timezone --value
+```
 
