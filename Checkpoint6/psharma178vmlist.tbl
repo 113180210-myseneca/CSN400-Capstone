@@ -1,0 +1,6 @@
+Name    ResourceGroup      Location       Zones
+------  -----------------  -------------  -------
+LR-127  STUDENT-RG-954525  canadacentral
+LS-127  STUDENT-RG-954525  canadacentral
+WC-127  STUDENT-RG-954525  canadacentral
+WS-127  STUDENT-RG-954525  canadacentral

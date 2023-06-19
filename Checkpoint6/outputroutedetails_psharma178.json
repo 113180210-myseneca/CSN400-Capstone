@@ -1,0 +1,12 @@
+{
+  "addressPrefix": "172.17.127.32/27",
+  "etag": "W/\"6e0d6f1f-712b-44d6-99ee-3b336ee08a57\"",
+  "hasBgpOverride": false,
+  "id": "/subscriptions/71d310bf-1718-4d11-87d1-99a7d4e2053f/resourceGroups/Student-RG-954525/providers/Microsoft.Network/routeTables/RT-127/routes/Route-to-Server",
+  "name": "Route-to-Server",
+  "nextHopIpAddress": "192.168.127.36",
+  "nextHopType": "VirtualAppliance",
+  "provisioningState": "Succeeded",
+  "resourceGroup": "Student-RG-954525",
+  "type": "Microsoft.Network/routeTables/routes"
+}

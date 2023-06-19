@@ -1,0 +1,6 @@
+Location       Name        ProvisioningState    ResourceGroup      ResourceGuid
+-------------  ----------  -------------------  -----------------  ------------------------------------
+canadacentral  LR-NSG-127  Succeeded            Student-RG-954525  6c4bd731-733e-461e-a271-b0f86cb7dbb2
+canadacentral  LS-NSG-127  Succeeded            Student-RG-954525  d07fdd97-f1c9-4a97-b192-2f34b3050b07
+canadacentral  WC-NSG-127  Succeeded            Student-RG-954525  470fc083-558b-462d-bf89-f38ce711dfa4
+canadacentral  WS-NSG-127  Succeeded            Student-RG-954525  85183003-6736-4d9b-b522-7f013c87e449
