@@ -143,3 +143,32 @@ Static hostname: LS-127
       Architecture: x86-64
 ```
 
+## Part D
+### Question 1
+Run a command in CLI that lists all your Custom Images. Hint: az image list .... Change the output format to table format and embed the answer in your submission.
+### Answer
+- az image list --output table
+```
+HyperVGeneration    Location       Name              ProvisioningState    ResourceGroup
+------------------  -------------  ----------------  -------------------  -----------------
+V2                  canadacentral  lr-127-ver-0.0.1  Succeeded            STUDENT-RG-954525
+V2                  canadacentral  ls-127-ver-0.0.1  Succeeded            STUDENT-RG-954525
+V2                  canadacentral  wc-127-ver-0.0.1  Succeeded            STUDENT-RG-954525
+V2                  canadacentral  ws-127-ver-0.0.1  Succeeded            STUDENT-RG-954525
+```
+
+### Question 2
+Delete your VMs after your work is completed. Run a command in CLI that lists all your VMs. Hint: az vm list .... Change the output format to table format and embed the answer in your submission.
+### Answer
+- az vm list --output table
+"no output"
+
+### Question 3
+Recreate all VMs from your images, and establish basic connectivity. How long the entire process took? How can you do this more efficiently?
+### Answer
+We can do this more efficiently by:
+1. Utilise automation tools like Azure CLI scripts or Azure Resource Manager (ARM) templates.
+2. When deploying numerous identical VMs, take into account using Azure Virtual Machine Scale Sets.
+3. To reduce time while creating VMs, create custom images of configured VMs.
+4. Automate the installation and configuration of applications using provisioning scripts or cloud-init.
+
