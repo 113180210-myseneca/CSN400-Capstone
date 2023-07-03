@@ -178,6 +178,6 @@ We can do this more efficiently by:
 |1|Student-RG-xxxxxx| Column (Stacked) | DailyCosts | Last 7 Days | Resource | Daily | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/e5fde731-f1e7-4db3-9b10-85ac81ef1eff)
 |2|Student-RG-xxxxxx| Column (Stacked) | DailyCosts | Last 7 Days | Service | Daily | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/3214f5a2-7ce5-49a9-a22a-972876dbf108)
 |3|Student-RG-xxxxxx| Area| AccumulatedCosts | Last 7 Days | Resource | Accumulated | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/80631cc5-a6f6-476b-b492-077c3913ad68)|
-|4|Student-RG-xxxxxx| Pie Chart | NA | Last Month | Service Name | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/80631cc5-a6f6-476b-b492-077c3913ad68) |
-|5|Student-RG-xxxxxx| Pie Chart | NA | Last Month | Service Family | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/80631cc5-a6f6-476b-b492-077c3913ad68) |
+|4|Student-RG-xxxxxx| Pie Chart | NA | Last Month | Service Name | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/dfbd6f47-f6fc-42ae-addb-d32355f92de1)|
+|5|Student-RG-xxxxxx| Pie Chart | NA | Last Month | Service Family | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/41fd2301-c932-4fc1-bd0d-683670d876ce)|
 |6|Student-RG-xxxxxx| Pie Chart | NA | Last Month | Product | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/75d0bdf9-7422-4eb4-9dab-c7fdac53baf9) |
