@@ -93,4 +93,53 @@ In configuring your Linux VMs, what command do you use to check the status of ip
 sudo iptables -L
 
 ### Question 3
+How can you make iptables service start automatically after reboot on CenOS/RHEL8? 👉 Hint: RHEL7: How to disable Firewalld and use Iptables instead
 ### Answer
+1. Disable firewalld
+2. Install iptables-services
+3. Enable, start iptables
+4. Save iptables rules
+
+### Question 4
+Run a command in LR-xx that shows all iptables chains with their order number. What is the default setting? Include both the command and its output in your submission. How could you improve these settings to be less vulnerable to attacks?
+### Answer
+- sudo iptables -L --line-numbers
+```
+Chain INPUT (policy ACCEPT)
+num  target     prot opt source               destination
+1    ACCEPT     all  --  anywhere             anywhere             state RELATED,ESTABLISHED
+2    ACCEPT     icmp --  anywhere             anywhere
+3    ACCEPT     all  --  anywhere             anywhere
+4    ACCEPT     tcp  --  anywhere             anywhere             state NEW tcp dpt:ssh
+5    REJECT     all  --  anywhere             anywhere             reject-with icmp-host-prohibited
+
+Chain FORWARD (policy ACCEPT)
+num  target     prot opt source               destination
+
+Chain OUTPUT (policy ACCEPT)
+num  target     prot opt source               destination
+```
+To strengthen security and adjust the settings:
+
+1. Decide on DROP as the default policy.
+2. Establish clear guidelines for permitted traffic.
+3. Put stateful packet filtering into practise.
+4. To make sure the firewall rules adhere to security requirements, examine and update them frequently.
+
+### Question 5
+Run a command that shows the hostname in LR-XX and LX-XX. Embed the output in your submission.
+### Answer
+- sudo hostnamectl
+```
+Static hostname: LS-127
+         Icon name: computer-vm
+           Chassis: vm
+        Machine ID: 453c95589ac44adfa31654d4a34fb87f
+           Boot ID: 0043bb8c8028492aa68a26d691dfb83d
+    Virtualization: microsoft
+  Operating System: Red Hat Enterprise Linux 8.7 (Ootpa)
+       CPE OS Name: cpe:/o:redhat:enterprise_linux:8::baseos
+            Kernel: Linux 4.18.0-425.13.1.el8_7.x86_64
+      Architecture: x86-64
+```
+
