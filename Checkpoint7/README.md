@@ -64,4 +64,33 @@ LS-127_disk1_0b32c4b3529b4fd7af5f01247cb51ac5  STUDENT-RG-954525  canadacentral 
 WC-127_disk1_eb2b3a9ff79f4ae3b71bf343bb2a531f  STUDENT-RG-954525  canadacentral  1        Standard_LRS  Windows   127       Succeeded
 WS-127_disk1_b720b2d368ea4adea65f3626aa8aea7d  STUDENT-RG-954525  canadacentral  1        Standard_LRS  Windows   127       Succeeded
 ```
+## Part B
+### Question 1
+Check the status of ip-forwarding using the command az network nic ip-config show with output format as json. Include only the command not output including the --query you used in your submission.
+### Answer
+```
+az network nic show -n lr-127675_z1 -g $RG --query "enableIPForwarding" -o json
+```
 
+### Question 2
+When your output format is json, which property shows the status of the ip-forwarding attribute? Embed only the property that shows the status of ip-forwarding.
+### Answer
+```
+enableIPForwarding
+```
+
+## Part C
+### Question 1
+In configuring your Linux VMs, for the step "Remove the firewalld service", which command will you be using?
+### Answer
+```
+sudo systemctl stop firewalld
+```
+
+### Question 2
+In configuring your Linux VMs, what command do you use to check the status of iptabels?
+### Answer
+sudo iptables -L
+
+### Question 3
+### Answer
