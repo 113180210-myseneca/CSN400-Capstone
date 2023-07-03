@@ -174,6 +174,7 @@ We can do this more efficiently by:
 
 ## Part E
 - Azure Cost Analysis Charts
+
 | No. | Scope | Chart Type | VIEW Type |  Date Range | Group By | Granularity| Example |
 |-|-|-|-|-|-|-|-|
 |1|Student-RG-954525| Column (Stacked) | DailyCosts | Last 7 Days | Resource | Daily | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/e5fde731-f1e7-4db3-9b10-85ac81ef1eff)
