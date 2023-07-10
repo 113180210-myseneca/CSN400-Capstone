@@ -165,3 +165,19 @@ LR-127.CSN4002234.com
 ```
 LS-127.CSN4002234.com
 ```
+
+## Part C
+
+- Azure Cost Analysis Charts
+
+| No. | Scope | Chart Type | VIEW Type |  Date Range | Group By | Granularity| Example |
+|-|-|-|-|-|-|-|-|
+|1|Student-RG-954525| Column (Stacked) | DailyCosts | Last 7 Days | Resource | Daily | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/8a297c77-1926-45e5-9ec1-d078b1f5f252)
+|2|Student-RG-954525| Column (Stacked) | DailyCosts | Last 7 Days | Service | Daily | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/4650ef4e-7418-459d-a614-36f77b66c3b4)
+|3|Student-RG-954525| Area| AccumulatedCosts | Last 7 Days | Resource | Accumulated | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/b0e4e97d-cf5b-41bd-ba8d-dfa53cc370b4)
+|4|Student-RG-954525| Pie Chart | NA | Last Month | Service Name | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/43530c0a-be05-48ac-ba4c-9412fd1b279b)|
+|5|Student-RG-954525| Pie Chart | NA | Last Month | Service Family | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/ba3cdbf2-709f-46bf-9299-c356d714aa94)|
+|6|Student-RG-954525| Pie Chart | NA | Last Month | Product | NA | ![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/b351fde6-050b-4b06-818f-246ba356e118) |
+
+-  Customized Azure Dashboard
+![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/745c7256-49e9-4b22-9d08-a303f678d530)
