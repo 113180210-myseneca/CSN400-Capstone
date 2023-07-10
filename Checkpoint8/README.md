@@ -13,6 +13,7 @@
 3. [Part C - Azure Cost Analysis Charts](#part-c)
 
 ## Part A
+
 ### Question 1 
 Get a list of your VM, NSG, NIC, and Disks using Azure CLI in table format. Do not include screenshots, just embed the output in table format in your submission.
 ### Answer
@@ -128,3 +129,39 @@ canadacentral  WC-NSG-127  Succeeded            Student-RG-954525  470fc083-558b
 canadacentral  WS-127-nsg  Succeeded            Student-RG-954525  128b3efc-5ec0-44a7-8750-a646cbbff1d4
 ```
 
+## Part B
+
+### Question 1
+Run commands that show the status of the Apache server and MariDB server in your LS-xx. Embed the output as a bash snippet.
+### Answer 
+- systemctl status apache2
+```
+Unit apache2.service could not be found.
+```
+- systemctl status mariadb
+```
+Unit mariadb.service could not be found.
+```
+
+### Question 2
+Run a command in LR-xx that show iptables chains. What is the default setting? How could you improve these settings to be less vulnerable to attacks?
+### Answer
+Th default setting for all three chains (INPUT,OUTPUT,FORWARD) is ACCEPT.
+Improvement in setting:
+- Set the default settings for the INPUT and FORWARD chains to DROP.
+- Only allow required services and ports.
+- Use the --state option to provide stateful packet inspection.
+- Enable packet rejection and lost logging.
+- Implement connection and rate limitations.
+
+### Question 3
+Run a command that shows the hostname in LR-XX and LX-XX and embed the output in your submission.
+### Answer 
+- hostname
+```
+LR-127.CSN4002234.com
+```
+- hostname
+```
+LS-127.CSN4002234.com
+```
