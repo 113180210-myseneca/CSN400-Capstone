@@ -166,6 +166,15 @@ LR-127.CSN4002234.com
 LS-127.CSN4002234.com
 ```
 
+### Question 4
+Submit your lr_iptables.txt and ls_iptables.txt files. Do not embed them in your README.md, just add it in your folder and give a hyperlink.
+### Answer 
+- Link to lr_iptables.txt
+https://github.com/113180210-myseneca/CSN400-Capstone/blob/main/Checkpoint8/lr_iptables.txt
+
+-Link to ls_iptables.txt
+https://github.com/113180210-myseneca/CSN400-Capstone/blob/main/Checkpoint8/ls_iptables.txt
+
 ## Part C
 
 - Azure Cost Analysis Charts
