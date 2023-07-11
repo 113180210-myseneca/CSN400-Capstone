@@ -172,7 +172,7 @@ Submit your lr_iptables.txt and ls_iptables.txt files. Do not embed them in your
 - Link to lr_iptables.txt
 https://github.com/113180210-myseneca/CSN400-Capstone/blob/main/Checkpoint8/lr_iptables.txt
 
--Link to ls_iptables.txt
+- Link to ls_iptables.txt
 https://github.com/113180210-myseneca/CSN400-Capstone/blob/main/Checkpoint8/ls_iptables.txt
 
 ## Part C
