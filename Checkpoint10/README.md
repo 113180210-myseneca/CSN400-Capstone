@@ -49,3 +49,19 @@ AddressPrefix       Name    PrivateEndpointNetworkPolicies    PrivateLinkService
 192.168.127.32/27   SN1     Disabled                          Enabled                              Succeeded            Student-RG-954525
 ```
 
+## Part D
+
+- Azure Cost Analysis Charts
+
+| No. | Scope | Chart Type | VIEW Type |  Date Range | Group By | Granularity| Example |
+|-|-|-|-|-|-|-|-|
+|1|Student-RG-954525| Column (Stacked) | DailyCosts | Last 7 Days | Resource | Daily | ![daily-cost-barchar](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/bfd21cc7-c04a-48a2-8841-1eea70213ed4)
+|2|Student-RG-954525| Column (Stacked) | DailyCosts | Last 7 Days | Service | Daily | ![daily-cost-service-barchart](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/569747d3-7ca0-4bd8-820d-333fdfc5534a)
+|3|Student-RG-954525| Area| AccumulatedCosts | Last 7 Days | Resource | Accumulated | ![accumulated-resource-barchart](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/d1189ae1-d04e-4a5c-9f2e-8ba7237889dc)
+|4|Student-RG-954525| Pie Chart | NA | Last Month | Service Name | NA | ![service-name-piechart (2)](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/121d57a1-52bb-404e-b0e6-e5f0c7291da6)
+|5|Student-RG-954525| Pie Chart | NA | Last Month | Service Family | NA | ![service-family-piechart (2)](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/78b43fe5-e73f-45ba-9118-316f5bba60f4)
+|6|Student-RG-954525| Pie Chart | NA | Last Month | Product | NA | ![product-piechart (2)](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/93fdbe5b-cf92-4ea6-b3d9-24f9f6eae211)
+
+- Customized Azure Dashboard
+
+![Customized Azure Dashboard (2)](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/b28fda05-00d6-4107-844d-f1033a46f8d2)
