@@ -54,60 +54,26 @@ AddressPrefix       Name    PrivateEndpointNetworkPolicies    PrivateLinkService
 - nat_basic-connectivity.sh
 
 ```
-# Completed on Fri Aug  4 00:49:42 2023
-Chain INPUT (policy ACCEPT 0 packets, 0 bytes)
- pkts bytes target     prot opt in     out     source               destination
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            0.0.0.0/0            state RELATED,ESTABLISHED
-    0     0 ACCEPT     icmp --  *      *       0.0.0.0/0            0.0.0.0/0
-    0     0 ACCEPT     all  --  lo     *       0.0.0.0/0            0.0.0.0/0
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       0.0.0.0/0            state NEW tcp dpt:22
-    0     0 LOG        all  --  *      *       0.0.0.0/0            0.0.0.0/0            limit: avg 10/sec burst 5 LOG flags 0 level 4 prefix "TO_DROP_INPUT"
+# to flush NAT tables
+iptables -t nat -F
 
-Chain FORWARD (policy ACCEPT 0 packets, 0 bytes)
- pkts bytes target     prot opt in     out     source               destination
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.32/27     tcp dpt:22
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.32/27     10.37.253.0/24       tcp spt:22
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            172.17.127.36        tcp dpt:53
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.36        0.0.0.0/0            tcp spt:53
-    0     0 ACCEPT     udp  --  *      *       0.0.0.0/0            172.17.127.36        udp dpt:53
-    0     0 ACCEPT     udp  --  *      *       172.17.127.36        0.0.0.0/0            udp spt:53
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.32/27     tcp dpt:3389
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.32/27     10.37.253.0/24       tcp spt:3389
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.37        tcp dpt:3306
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.37        10.37.253.0/24       tcp spt:3306
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.37        tcp dpt:80
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.37        10.37.253.0/24       tcp spt:80
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.36        tcp dpt:80
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.36        10.37.253.0/24       tcp spt:80
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.36        tcp dpt:21
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.36        10.37.253.0/24       tcp spt:21
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       172.17.127.36        tcp dpts:50000:51000
-    0     0 ACCEPT     tcp  --  *      *       172.17.127.36        10.37.253.0/24       tcp spts:50000:51000
-    0     0 LOG        all  --  *      *       0.0.0.0/0            0.0.0.0/0            limit: avg 10/sec burst 5 LOG flags 0 level 4 prefix "TO_DROP_FORWARD"
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       192.168.105.36       tcp dpt:18105
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       10.37.253.0/24       tcp spt:18105
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       192.168.105.36       tcp dpt:16105
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       10.37.253.0/24       tcp spt:16105
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       192.168.105.36       tcp dpt:19105
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       10.37.253.0/24       tcp spt:19105
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       192.168.105.36       tcp dpt:13105
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       10.37.253.0/24       tcp spt:13105
-    0     0 ACCEPT     tcp  --  *      *       10.37.253.0/24       192.168.105.36       tcp dpt:12105
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       10.37.253.0/24       tcp spt:12105
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       0.0.0.0/0            tcp dpt:80
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            192.168.105.36       tcp spt:80
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       0.0.0.0/0            tcp dpt:22
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            192.168.105.36       tcp spt:22
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       0.0.0.0/0            tcp dpt:3389
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            192.168.105.36       tcp spt:3389
-    0     0 ACCEPT     tcp  --  *      *       192.168.105.36       0.0.0.0/0            tcp dpt:3306
-    0     0 ACCEPT     tcp  --  *      *       0.0.0.0/0            192.168.105.36       tcp spt:3306
-    0     0 DROP       all  --  *      *       0.0.0.0/0            0.0.0.0/0
+# to allow other students to access APACHE server
+iptables -t nat -A PREROUTING -p tcp --dport 18127 -j DNAT --to-destination 172.17.127.37:80
 
-Chain OUTPUT (policy ACCEPT 0 packets, 0 bytes)
- pkts bytes target     prot opt in     out     source               destination
-    0     0 ACCEPT     all  --  *      *       0.0.0.0/0            0.0.0.0/0
-[psharma178@LR-127 ~]$
+# to allow other students to access MySQL server
+iptables -t nat -A PREROUTING -p tcp --dport 16127 -j DNAT --to-destination 172.17.127.37:3306
+
+# to allow other students to access Linux server - SSH
+iptables -t nat -A PREROUTING -p tcp --dport 12127 -j DNAT --to-destination 172.17.127.37:22
+
+# to allow other students to access IIS server
+iptables -t nat -A PREROUTING -p tcp --dport 19127 -j DNAT --to-destination 172.17.127.36:80
+
+# to allow other students to access Windows server - RDP
+iptables -t nat -A PREROUTING -p tcp --dport 13127 -j DNAT --to-destination 172.17.127.36:3389
+
+# POST ROUTING
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 ```
 ## Part D
