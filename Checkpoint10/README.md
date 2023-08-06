@@ -89,6 +89,7 @@ Aug  4 00:31:04 LR-127 kernel: TO_DROP_FORWARDIN=eth0 OUT=eth0 MAC=00:22:48:b2:b
 Aug  4 01:01:02 LR-127 kernel: TO_DROP_FORWARDIN=eth0 OUT=eth0 MAC=00:22:48:b2:bc:1a:74:83:ef:ce:c9:89:08:00 SRC=192.168.105.36 DST=192.168.127.36 LEN=52 TOS=0x00 PREC=0x00 TTL=125 ID=56037 DF PROTO=TCP SPT=50390 DPT=3389 WINDOW=2049 RES=0x00 ACK URGP=0
 ```
 - Screenshot of marked and isolated packets
+![image](https://github.com/113180210-myseneca/CSN400-Capstone/assets/133024891/01bf1689-b229-4fac-b6a0-d89ef632f05e)
 
 
 ## Part D
